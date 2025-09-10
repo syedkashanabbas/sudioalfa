@@ -1,6 +1,6 @@
 /* Custom tweaks for polish */
 body {
-  font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav ul li a {
@@ -15,4 +15,27 @@ video {
     margin: 0;
     padding: 0;
     /* box-sizing: border-box; */
+
+}
+h1 {
+  font-weight: 800;
+}
+@keyframes cinematicZoom {
+  0% { opacity: 0; transform: scale(1.5); filter: blur(14px); }
+  60% { opacity: 1; transform: scale(1.08); filter: blur(2px); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+@keyframes cinematicRise {
+  0% { opacity: 0; transform: translateY(50px) scale(1.2); filter: blur(10px); }
+  70% { opacity: 1; transform: translateY(-5px) scale(1.03); filter: blur(1px); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+
+.animate-cine-zoom {
+  animation: cinematicZoom 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.animate-cine-rise {
+  animation: cinematicRise 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
