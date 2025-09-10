@@ -1,0 +1,18 @@
+/* Custom tweaks for polish */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+nav ul li a {
+  transition: color 0.3s ease;
+}
+
+video {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
