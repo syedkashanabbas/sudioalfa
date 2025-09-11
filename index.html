@@ -146,48 +146,83 @@
   </div>
 </section>
 
-  <section class="py-20 relative bg-white py-20 "   
-  data-aos="blur-in">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-    <h2 class="text-lg font-semibold text-indigo-600 uppercase tracking-wide">Testimonials</h2>
-    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900">Real Stories From Our Clients</p>
+<section class="py-20 bg-gray-50" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 text-center mb-12">
+    <h2 class="text-lg font-semibold text-red-600 uppercase tracking-wide">Testimonials</h2>
+    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900">Real Stories From Our Sellers</p>
     <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-      Watch what our happy clients have to say about finding their dream properties with us.
+      Honest experiences from property owners who sold with us.
     </p>
+  </div>
 
-    <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Video Testimonial 1 -->
-      <div class="relative rounded-xl overflow-hidden shadow-lg group">
-        <iframe class="w-full h-64" src="https://www.youtube.com/embed/8LSt8_11wbQ" 
-          title="Video Testimonial 1" frameborder="0" allowfullscreen></iframe>
-        <div class="absolute bottom-0 bg-gradient-to-t from-black/70 to-transparent w-full p-4 text-left">
-          <h3 class="text-white font-semibold">John Doe</h3>
-          <p class="text-gray-300 text-sm">Bought a Family Home</p>
+  <!-- Carousel Wrapper -->
+  <div class="relative max-w-6xl mx-auto overflow-hidden">
+    <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out">
+
+      <!-- Slide 1 -->
+      <div class="min-w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Left Content -->
+        <div class="text-left px-6 md:px-12">
+          <h3 class="text-2xl font-bold text-gray-900">John Doe</h3>
+          <div class="flex text-yellow-400 text-lg mt-1">★★★★★</div>
+          <p class="mt-4 text-gray-600 text-lg leading-relaxed">
+            “From free valuation to professional video and photography, the whole process 
+            was seamless. Buyers reached out immediately and I closed faster than expected.”
+          </p>
+        </div>
+        <!-- Right Video -->
+        <div class="w-full">
+          <iframe class="w-full h-72 md:h-96 rounded-lg" 
+            src="https://www.youtube.com/embed/8LSt8_11wbQ" 
+            title="John Doe Testimonial" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
 
-      <!-- Video Testimonial 2 -->
-      <div class="relative rounded-xl overflow-hidden shadow-lg group">
-        <iframe class="w-full h-64" src="https://www.youtube.com/embed/Jw7s42Op2ao" 
-          title="Video Testimonial 2" frameborder="0" allowfullscreen></iframe>
-        <div class="absolute bottom-0 bg-gradient-to-t from-black/70 to-transparent w-full p-4 text-left">
-          <h3 class="text-white font-semibold">Sarah Miller</h3>
-          <p class="text-gray-300 text-sm">Sold a Luxury Villa</p>
+      <!-- Slide 2 -->
+      <div class="min-w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="text-left px-6 md:px-12">
+          <h3 class="text-2xl font-bold text-gray-900">Sarah Miller</h3>
+          <div class="flex text-yellow-400 text-lg mt-1">★★★★☆</div>
+          <p class="mt-4 text-gray-600 text-lg leading-relaxed">
+            “The video tour and marketing support made my villa shine online. 
+            I had multiple offers within days and got a great deal.”
+          </p>
+        </div>
+        <div class="w-full">
+          <iframe class="w-full h-72 md:h-96 rounded-lg" 
+            src="https://www.youtube.com/embed/Jw7s42Op2ao" 
+            title="Sarah Miller Testimonial" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
 
-      <!-- Video Testimonial 3 -->
-      <div class="relative rounded-xl overflow-hidden shadow-lg group">
-        <iframe class="w-full h-64" src="https://www.youtube.com/embed/8LSt8_11wbQ" 
-          title="Video Testimonial 3" frameborder="0" allowfullscreen></iframe>
-        <div class="absolute bottom-0 bg-gradient-to-t from-black/70 to-transparent w-full p-4 text-left">
-          <h3 class="text-white font-semibold">Michael Lee</h3>
-          <p class="text-gray-300 text-sm">Rented a Modern Apartment</p>
+      <!-- Slide 3 -->
+      <div class="min-w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="text-left px-6 md:px-12">
+          <h3 class="text-2xl font-bold text-gray-900">Michael Lee</h3>
+          <div class="flex text-yellow-400 text-lg mt-1">★★★★★</div>
+          <p class="mt-4 text-gray-600 text-lg leading-relaxed">
+            “They handled everything — valuation, media, and connecting me with the right buyers. 
+            I couldn’t believe how smooth selling could be.”
+          </p>
+        </div>
+        <div class="w-full">
+          <iframe class="w-full h-72 md:h-96 rounded-lg" 
+            src="https://www.youtube.com/embed/8LSt8_11wbQ" 
+            title="Michael Lee Testimonial" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <button id="prevBtn" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">Prev</button>
+      <button id="nextBtn" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">Next</button>
     </div>
   </div>
 </section>
+
+
 <section class="relative bg-white py-16">
   <div class="max-w-7xl mx-auto px-6">
     <!-- Heading -->
@@ -352,6 +387,7 @@
   <script src="./assets/js/hero-heading.js"></script>
   <script src="./assets/js/navbar.js"></script>
   <script src="./assets/js/contactform.js"></script>
+  <script src="./assets/js/testimonial-carousel.js"></script>
   <script>
     AOS.init({
       duration: 1000,
