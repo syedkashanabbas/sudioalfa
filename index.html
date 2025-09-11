@@ -15,36 +15,26 @@
 <body class="bg-white text-white">
 
   <!-- Navbar -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm">
-  <div class="max-w-8xl mx-auto px-6 flex items-center justify-between py-4">
-    <!-- Logo -->
-    <img class="h-12" src="./assets/img/logo.png" alt=""
-         data-aos="fade-down" data-aos-duration="1000">
+<nav class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm transition-all duration-500" id="mainNav">
+  <div class="max-w-8xl mx-auto px-6 flex items-center justify-center relative py-6">
+    
+    <!-- Centered Big Logo with Top Space -->
+    <img id="logo" 
+         class="h-48 mt-32 transition-all duration-700 ease-in-out absolute left-1/2 transform -translate-x-1/2"
+         src="./assets/img/logo.png" 
+         alt="Logo">
 
-    <!-- Links Center -->
-    <ul class="hidden md:flex space-x-10 text-lg font-medium">
-      <li data-aos="fade-up" data-aos-delay="100">
-        <a href="#" class="hover:text-red-500 transition">Home</a>
-      </li>
-      <li data-aos="fade-up" data-aos-delay="200">
-        <a href="#" class="hover:text-red-500 transition">Services</a>
-      </li>
-      <li data-aos="fade-up" data-aos-delay="300">
-        <a href="#" class="hover:text-red-500 transition">About</a>
-      </li>
-      <li data-aos="fade-up" data-aos-delay="400">
-        <a href="#" class="hover:text-red-500 transition">Portfolio</a>
-      </li>
-    </ul>
-
-    <!-- Contact Button Right -->
-    <a href="#contact" 
-       class="bg-red-700 hover:bg-red-800 text-white px-5 py-2 rounded-lg font-semibold transition"
-       data-aos="zoom-in" data-aos-delay="600">
-       Contact Us
+    <!-- Button Right -->
+    <a href="#sell" 
+       class="absolute right-6 bg-red-700 hover:bg-red-800 text-white px-5 py-2 rounded-lg font-semibold transition">
+       Sell Your House
     </a>
   </div>
 </nav>
+
+
+
+
 
 
   <!-- Hero Section -->
@@ -60,17 +50,18 @@
   <!-- Hero Content -->
   <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
     <!-- Main Heading -->
-    <h1 id="hero-heading" 
-        class="opacity-0 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight">
-      Shaping future<br />through excellence
-    </h1>
+  <h1 id="hero-heading" 
+    class="opacity-0 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight">
+  Sell Your Home<br />With Confidence
+</h1>
 
-    <!-- Subheading -->
-    <p id="hero-sub" 
-       class="opacity-0 mt-4 sm:mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-xl sm:max-w-2xl">
-      We are a top 25 builder and developer fully invested in our customers’ success 
-      and improving the communities we serve.
-    </p>
+<!-- Subheading -->
+<p id="hero-sub" 
+   class="opacity-0 mt-4 sm:mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-xl sm:max-w-2xl">
+   We connect trusted buyers with homeowners like you. List your house, land, or property today 
+   and get the best market value—quick, easy, and secure.
+</p>
+
   </div>
 </section>
 
@@ -309,6 +300,7 @@
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="./assets/js/hero-heading.js"></script>
+  <script src="./assets/js/navbar.js"></script>
   <script>
     AOS.init({
       duration: 1000,
