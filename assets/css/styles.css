@@ -97,3 +97,7 @@ h1 {
   padding-right: 2.5rem;
 }
 
+.custom-rounded {
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}

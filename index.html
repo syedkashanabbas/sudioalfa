@@ -65,117 +65,87 @@
   </div>
 </section>
 
-  <section 
+<section class="relative bg-gradient-to-b from-red-700 to-red-900 py-20 px-6 text-white rounded-b-3xl">
+  <div class="max-w-3xl mx-auto text-center">
+    <!-- Catchy Heading -->
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4">
+      Ready to Sell Your Property?
+    </h2>
+    <p class="text-lg sm:text-xl text-red-100 mb-10">
+      List your apartment, land, or house in minutes. Enter your details and let us help you connect with trusted buyers.
+    </p>
 
-  class="relative h-screen flex items-end justify-center rounded-3xl bg-cover bg-center text-gray-800"
-  style="background-image: url('assets/img/landscape.jpg'); height:100vh ;"
->
-  <div 
-    class="relative z-10 w-full max-w-7xl bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-8 
-    translate-y-1/2"
-  >
-      <!-- Tabs -->
-<div class="flex justify-center mb-6 space-x-3">
-  <!-- Active Tab -->
-  <button 
-    class="tab-btn px-6 py-2 font-semibold rounded-lg bg-gradient-to-r from-red-600 to-red-800 text-white shadow-md hover:shadow-lg transition" 
-    data-tab="rent"
-  >
-    For Rent
-  </button>
-
-  <!-- Inactive Tab -->
-  <button 
-    class="tab-btn px-6 py-2 font-semibold rounded-lg bg-red-50 text-red-700 border border-red-300 hover:bg-red-100 transition" 
-    data-tab="sale"
-  >
-    For Sale
-  </button>
-</div>
-
-
-      <!-- Tab Panels -->
-      <div id="rent" class="tab-panel active">
-        <form class="grid md:grid-cols-4 gap-4">
-          <input type="text" placeholder="Search keyword"
-            class="px-4 py-3 rounded-lg border focus:ring-2 focus:ring-blue-500 outline-none"/>
-
-          <div class="custom-select">
-            <select class="px-4 py-3 rounded-lg border focus:ring-2 focus:ring-blue-500 outline-none w-full">
-              <option>All Cities</option>
-              <option>Toronto</option>
-              <option>Vancouver</option>
-            </select>
-          </div>
-
-          <div class="custom-select">
-            <select class="px-4 py-3 rounded-lg border focus:ring-2 focus:ring-blue-500 outline-none w-full">
-              <option>Any Bedrooms</option>
-              <option>1 Bedroom</option>
-              <option>2 Bedrooms</option>
-            </select>
-          </div>
-
-          <div class="flex gap-2">
-            <div class="custom-select flex-1">
-              <select class="px-4 py-3 rounded-lg border focus:ring-2 focus:ring-blue-500 outline-none w-full">
-                <option>Max Price</option>
-                <option>$500</option>
-                <option>$1000</option>
-              </select>
-            </div>
-            <button 
-              type="submit"
-                      class="px-6 py-3 rounded-lg bg-gradient-to-r from-red-600 to-red-800 text-white font-semibold hover:opacity-90 transition"
-
-            >
-              Search
-            </button>
-          </div>
-        </form>
+    <!-- Sell Form -->
+    <form id="sellForm" class="bg-white text-gray-800 rounded-2xl shadow-xl p-8 space-y-6">
+      
+      <!-- Property Type -->
+      <div>
+        <label class="block font-semibold mb-2">Property Type</label>
+        <select class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-500 outline-none">
+          <option>Apartment</option>
+          <option>Land</option>
+          <option>Topography</option>
+          <option>Other</option>
+        </select>
       </div>
 
-      <div id="sale" class="tab-panel">
-        <form class="grid md:grid-cols-4 gap-4">
-          <input type="text" placeholder="Search keyword"
-            class="px-4 py-3 rounded-lg border focus:ring-2 focus:ring-green-500 outline-none"/>
+      <!-- Area -->
+      <div>
+        <label class="block font-semibold mb-2">Area (sq ft)</label>
+        <input type="text" placeholder="Enter area" 
+               class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-500 outline-none"/>
+      </div>
 
-          <div class="custom-select">
-            <select class="px-4 py-3 rounded-lg border focus:ring-2 focus:ring-green-500 outline-none w-full">
-              <option>All Cities</option>
-              <option>Calgary</option>
-              <option>Ottawa</option>
-            </select>
-          </div>
+      <!-- Location -->
+      <div>
+        <label class="block font-semibold mb-2">Where is your house?</label>
+        <input type="text" placeholder="City / Address" 
+               class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-500 outline-none"/>
+      </div>
 
-          <div class="custom-select">
-            <select class="px-4 py-3 rounded-lg border focus:ring-2 focus:ring-green-500 outline-none w-full">
-              <option>Any Bedrooms</option>
-              <option>3 Bedrooms</option>
-              <option>4 Bedrooms</option>
-            </select>
-          </div>
+      <!-- Owner Info -->
+      <div>
+        <label class="block font-semibold mb-2">Owner Name</label>
+        <input type="text" placeholder="Your Name"
+               class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-500 outline-none"/>
+      </div>
 
-          <div class="flex gap-2">
-            <div class="custom-select flex-1">
-              <select class="px-4 py-3 rounded-lg border focus:ring-2 focus:ring-green-500 outline-none w-full">
-                <option>Max Price</option>
-                <option>$100k</option>
-                <option>$500k</option>
-              </select>
-            </div>
-           <button 
-        type="submit"
-        class="px-6 py-3 rounded-lg bg-gradient-to-r from-red-600 to-red-800 text-white font-semibold hover:opacity-90 transition"
-      >
-        Search
+      <div>
+        <label class="block font-semibold mb-2">Telephone</label>
+        <input type="tel" placeholder="Phone Number"
+               class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-500 outline-none"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-2">Email</label>
+        <input type="email" placeholder="Email Address"
+               class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-500 outline-none"/>
+      </div>
+
+      <!-- Privacy Checkbox -->
+      <div class="flex items-center space-x-2">
+        <input type="checkbox" id="privacy" class="h-4 w-4 text-red-600 border-gray-300 rounded"/>
+        <label for="privacy" class="text-sm">I have read and agree to the <a href="https://www.studioalfa.info/privacy/" class="text-red-600 underline">Privacy Policy</a></label>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" 
+              class="w-full py-4 rounded-lg bg-gradient-to-r from-red-600 to-red-800 text-white font-semibold text-lg hover:opacity-90 transition">
+        Start Calculating
       </button>
 
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+      <!-- Loader + Result -->
+      <div id="loader" class="hidden mt-6 text-red-700 font-semibold">Calculating your property value...</div>
+      <div id="result" class="hidden mt-6 text-green-600 font-bold">Your property has been evaluated. Our team will reach out to you shortly!</div>
+    </form>
+
+    <!-- Subfooter Text -->
+    <p class="mt-12 text-sm text-red-200">
+      Get a free valuation of your property. Enter essential details and start the appraisal — our experts will calculate the best price you can sell for.
+    </p>
+  </div>
+</section>
+
   <section class="py-20 relative bg-white py-20 mt-40 "   
   data-aos="blur-in">
   <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
@@ -286,7 +256,7 @@
 
     <!-- Right side: Links -->
     <div class="mt-4 md:mt-0">
-      <a href="#" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 transition">
+      <a href="https://www.studioalfa.info/privacy/" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 transition">
         Privacy Policy
       </a>
     </div>
@@ -301,6 +271,7 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="./assets/js/hero-heading.js"></script>
   <script src="./assets/js/navbar.js"></script>
+  <script src="./assets/js/contactform.js"></script>
   <script>
     AOS.init({
       duration: 1000,
