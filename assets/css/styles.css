@@ -1,6 +1,6 @@
 /* Custom tweaks for polish */
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 nav ul li a {
@@ -11,25 +11,48 @@ video {
   filter: brightness(0.9) contrast(1.1);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    /* box-sizing: border-box; */
-
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
 }
 h1 {
   font-weight: 800;
 }
 @keyframes cinematicZoom {
-  0% { opacity: 0; transform: scale(1.5); filter: blur(14px); }
-  60% { opacity: 1; transform: scale(1.08); filter: blur(2px); }
-  100% { opacity: 1; transform: scale(1); filter: blur(0); }
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+    filter: blur(14px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.08);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
 }
 
 @keyframes cinematicRise {
-  0% { opacity: 0; transform: translateY(50px) scale(1.2); filter: blur(10px); }
-  70% { opacity: 1; transform: translateY(-5px) scale(1.03); filter: blur(1px); }
-  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(1.2);
+    filter: blur(10px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.03);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
 }
 
 .animate-cine-zoom {
@@ -38,4 +61,38 @@ h1 {
 
 .animate-cine-rise {
   animation: cinematicRise 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+[data-aos="blur-in"] {
+  filter: blur(20px);
+  opacity: 0;
+  transition-property: filter, opacity;
+}
+[data-aos="blur-in"].aos-animate {
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.tab-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.tab-panel.active {
+  display: block;
+  opacity: 1;
+}
+/* Custom Select look */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: white
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
+    no-repeat right 1rem center/1rem;
+  padding-right: 2.5rem;
 }
