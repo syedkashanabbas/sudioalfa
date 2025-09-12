@@ -328,75 +328,102 @@
 
 
 <!-- About Section -->
-<section 
-  class="relative bg-white py-16 sm:py-20"
-  data-aos="fade-up"
->
-  <div class="container max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12 px-6 sm:px-8 md:px-12">
+<section class="relative bg-white py-16 sm:py-20" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 md:px-12">
     
-    <!-- Left Side -->
-    <div class="max-w-xl text-center lg:text-left">
-      <h4 class="text-sm uppercase tracking-widest text-gray-500 mb-4">About Us</h4>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-        Empowering Sellers,<br class="hidden sm:block"/> Every Step of the Way
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+        Empowering Sellers, Every Step of the Way
       </h2>
-      <p class="text-gray-600 mb-8 text-base sm:text-lg md:text-xl leading-relaxed">
+      <p class="mt-4 text-gray-600 text-lg">
         Our mission is simple: to help property owners sell with confidence. 
         From free valuations to closing deals, we make the process faster, easier, 
         and more profitable — so you can focus on what’s next.
       </p>
-      <button class="px-6 py-3 bg-gradient-to-r from-red-600 to-red-800 text-white font-semibold rounded-md shadow hover:opacity-90 transition">
-        Start Selling Today
-      </button>
+      <div class="w-16 h-1 bg-red-600 mx-auto mt-4"></div>
     </div>
 
-    <!-- Right Side -->
-    <div class="space-y-10 w-full">
-      <div class="flex flex-col sm:flex-row sm:gap-6 text-center sm:text-left">
-        <h3 class="text-2xl font-bold text-red-600 mb-2 sm:mb-0">01.</h3>
-        <div>
-          <h4 class="text-xl font-semibold text-gray-900">Free Property Valuation</h4>
-          <p class="text-gray-600">
-            Instantly discover the real market value of your property with our expert appraisal tools.
-          </p>
+    <!-- Feature Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+        <div class="flex justify-center text-red-600 mb-4">
+          <!-- Valuation Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 17l6-6 4 4 8-8" />
+          </svg>
         </div>
+        <h4 class="text-xl font-semibold text-gray-900 mb-2">Free Property Valuation</h4>
+        <p class="text-gray-600 text-sm">
+          Instantly discover the real market value of your property with our expert appraisal tools.
+        </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row sm:gap-6 text-center sm:text-left">
-        <h3 class="text-2xl font-bold text-red-600 mb-2 sm:mb-0">02.</h3>
-        <div>
-          <h4 class="text-xl font-semibold text-gray-900">Professional Media</h4>
-          <p class="text-gray-600">
-            After valuation, we arrange a professional photoshoot and videography 
-            to showcase your property at its absolute best.
-          </p>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+        <div class="flex justify-center text-red-600 mb-4">
+          <!-- Camera Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Camera body -->
+          <rect x="3" y="7" width="18" height="14" rx="2" ry="2"></rect>
+          <!-- Lens -->
+          <circle cx="12" cy="14" r="4"></circle>
+          <!-- Small flash/top -->
+          <path d="M9 7l1.5-3h3L15 7"></path>
+        </svg>
+
         </div>
+        <h4 class="text-xl font-semibold text-gray-900 mb-2">Professional Media</h4>
+        <p class="text-gray-600 text-sm">
+          After valuation, we arrange a professional photoshoot and videography to showcase your property at its absolute best.
+        </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row sm:gap-6 text-center sm:text-left">
-        <h3 class="text-2xl font-bold text-red-600 mb-2 sm:mb-0">03.</h3>
-        <div>
-          <h4 class="text-xl font-semibold text-gray-900">Connect With Buyers</h4>
-          <p class="text-gray-600">
-            We link you directly with serious, verified buyers who are actively looking for properties like yours.
-          </p>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+        <div class="flex justify-center text-red-600 mb-4">
+          <!-- Handshake Icon -->
+       <svg xmlns="http://www.w3.org/2000/svg" 
+     class="w-10 h-10" 
+     viewBox="0 0 24 24" 
+     fill="none" 
+     stroke="currentColor" 
+     stroke-width="2" 
+     stroke-linecap="round" 
+     stroke-linejoin="round">
+  <!-- Two people side by side -->
+  <circle cx="9" cy="7" r="4"></circle>
+  <path d="M17 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"></path>
+  <path d="M3 21v-2c0-2.76 2.24-5 5-5h2c2.76 0 5 2.24 5 5v2"></path>
+  <path d="M15 21v-2c0-1.1-.9-2-2-2h-1"></path>
+</svg>
+
         </div>
+        <h4 class="text-xl font-semibold text-gray-900 mb-2">Connect With Buyers</h4>
+        <p class="text-gray-600 text-sm">
+          We link you directly with serious, verified buyers who are actively looking for properties like yours.
+        </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row sm:gap-6 text-center sm:text-left">
-        <h3 class="text-2xl font-bold text-red-600 mb-2 sm:mb-0">04.</h3>
-        <div>
-          <h4 class="text-xl font-semibold text-gray-900">Close Deals Faster</h4>
-          <p class="text-gray-600">
-            With our proven strategies and expert support, highlight your property’s strengths 
-            and sell quickly at the best price.
-          </p>
+      <!-- Card 4 -->
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+        <div class="flex justify-center text-red-600 mb-4">
+          <!-- Lightning Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
         </div>
+        <h4 class="text-xl font-semibold text-gray-900 mb-2">Close Deals Faster</h4>
+        <p class="text-gray-600 text-sm">
+          With our proven strategies and expert support, highlight your property’s strengths and sell quickly at the best price.
+        </p>
       </div>
+
     </div>
   </div>
 </section>
-
 
 <section class="relative bg-white">
   <div class="grid grid-cols-1 md:grid-cols-2 min-h-[400px] md:min-h-[600px]">
