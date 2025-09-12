@@ -36,7 +36,8 @@
 
 
 <!-- Hero Section -->
-<section class="relative h-screen w-full overflow-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-screen w-full overflow-hidden">
   <!-- Background Video -->
   <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
     <source src="assets/img/hero-bg.mp4" type="video/mp4">
@@ -46,7 +47,7 @@
   <div class="absolute inset-0 bg-black/50"></div>
 
   <!-- Hero Content -->
-  <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+  <div class="relative z-10 flex flex-col items-center justify-start text-center px-6 pt-32">
     <!-- Main Heading -->
     <h1 id="hero-heading" 
       class="opacity-0 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight text-white">
@@ -55,27 +56,25 @@
 
     <!-- Subheading -->
     <p id="hero-sub" 
-      class="opacity-0 mt-4 sm:mt-6 text-base sm:text-lg mb-36 md:text-xl lg:text-2xl text-gray-200 max-w-xl sm:max-w-2xl">
+      class="opacity-0 mt-6 sm:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-xl sm:max-w-2xl">
       We connect trusted buyers with property owners like you. List your house, land, or property today 
       and get the best market value—quick, easy, and secure.
     </p>
+
+    <!-- YouTube Video -->
+    <div class="mt-16 w-[90%] max-w-7xl h-[700px]">
+      <iframe 
+        class="w-full h-full rounded-xl shadow-2xl"
+        src="https://www.youtube.com/embed/8LSt8_11wbQ?autoplay=1&loop=1&playlist=8LSt8_11wbQ&controls=1&modestbranding=1"
+        title="YouTube video"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
-
-  <!-- Overlapping YouTube Iframe -->
-<!-- Overlapping YouTube Iframe -->
-<div class="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 
-            w-[80%] max-w-6xl h-[600px] z-30">
-  <iframe 
-    class="w-full h-full rounded-xl shadow-2xl"
-    src="https://www.youtube.com/embed/8LSt8_11wbQ?autoplay=1&mute=1&loop=1&playlist=8LSt8_11wbQ&controls=0&modestbranding=1"
-    title="YouTube video"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
-</div>
-
 </section>
+
 
 <!-- Sell Section (Full Width) -->
 <section id="sell" 
