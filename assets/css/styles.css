@@ -101,3 +101,12 @@ h1 {
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
 }
+
+/* Hide ugly scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

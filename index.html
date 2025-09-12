@@ -293,22 +293,39 @@
       </p>
     </div>
 
-    <!-- Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <img src="assets/img/gallery-1.jpg" alt="Gallery 1" class="w-full h-64 object-cover rounded-lg shadow-md">
-      <img src="assets/img/gallery-2.jpg" alt="Gallery 2" class="w-full h-64 object-cover rounded-lg shadow-md">
-      <img src="assets/img/gallery-3.png" alt="Gallery 3" class="w-full h-64 object-cover rounded-lg shadow-md">
+    <!-- Swiper Container -->
+    <div class="relative overflow-hidden">
+      <div id="galleryWrapper" class="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar">
+        <img src="assets/img/gallery-1.jpg" class="w-96 h-64 object-cover rounded-lg shadow-md" />
+        <img src="assets/img/gallery-2.jpg" class="w-96 h-64 object-cover rounded-lg shadow-md" />
+        <img src="assets/img/gallery-3.png" class="w-96 h-64 object-cover rounded-lg shadow-md" />
+        <img src="assets/img/gallery-4.jpg" class="w-96 h-64 object-cover rounded-lg shadow-md" />
+        <img src="assets/img/gallery-5.jpg" class="w-96 h-64 object-cover rounded-lg shadow-md" />
+        <img src="assets/img/gallery-6.jpg" class="w-96 h-64 object-cover rounded-lg shadow-md" />
+        <img src="assets/img/gallery-7.jpg" class="w-96 h-64 object-cover rounded-lg shadow-md" />
+        <img src="assets/img/gallery-8.jpg" class="w-96 h-64 object-cover rounded-lg shadow-md" />
+        <img src="assets/img/gallery-9.jpg" class="w-96 h-64 object-cover rounded-lg shadow-md" />
+      </div>
 
-      <img src="assets/img/gallery-4.jpg" alt="Gallery 4" class="w-full h-64 object-cover rounded-lg shadow-md">
-      <img src="assets/img/gallery-5.jpg" alt="Gallery 5" class="w-full h-64 object-cover rounded-lg shadow-md">
-      <img src="assets/img/gallery-6.jpg" alt="Gallery 6" class="w-full h-64 object-cover rounded-lg shadow-md">
-
-      <img src="assets/img/gallery-7.jpg" alt="Gallery 7" class="w-full h-64 object-cover rounded-lg shadow-md">
-      <img src="assets/img/gallery-8.jpg" alt="Gallery 8" class="w-full h-64 object-cover rounded-lg shadow-md">
-      <img src="assets/img/gallery-9.jpg" alt="Gallery 9" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <!-- Controls -->
+       <button id="prevBtn" 
+  class="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-gray-800 p-3 shadow-lg rounded-full hover:bg-gray-100 transition">
+  <!-- SVG Left Arrow -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+  </svg>
+</button>
+<button id="nextBtn" 
+  class="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-gray-800 p-3 shadow-lg rounded-full hover:bg-gray-100 transition">
+  <!-- SVG Right Arrow -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+  </svg>
+</button>
     </div>
   </div>
 </section>
+
 
 <!-- About Section -->
 <section 
@@ -445,6 +462,7 @@
   <script src="./assets/js/hero-heading.js"></script>
   <script src="./assets/js/navbar.js"></script>
   <script src="./assets/js/contactform.js"></script>
+  <script src="./assets/js/gallery.js"></script>
   <script src="./assets/js/testimonial-carousel.js"></script>
   <script>
     AOS.init({
