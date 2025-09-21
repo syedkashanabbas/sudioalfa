@@ -1,9 +1,45 @@
 const questions = [
-  { text: "What type of property are you ready to sell us?", options: ["Apartment", "House", "Plot / Land", "Other"] },
-  { text: "How big is your property?", options: ["Less than 1000 sq ft", "1000 – 2000 sq ft", "2000 – 5000 sq ft", "More than 5000 sq ft"] },
-  { text: "Where is your property located?", options: ["Prime City Area", "Suburbs", "Highway Side", "Other"] },
-  { text: "When do you want to close the deal?", options: ["Right Now", "Within 1–3 Months", "3–6 Months", "Still Deciding"] },
-  { text: "How can we contact you?", type: "input" }
+  { 
+    text: "Nome e Cognome*", 
+    type: "input", 
+    fields: [
+      { name: "nome", type: "text", placeholder: "Es. Mario Rossi" }
+    ]
+  },
+  { 
+    text: "Telefono*", 
+    type: "input", 
+    fields: [
+      { name: "telefono", type: "tel", placeholder: "Es. +39 333 1234567" }
+    ],
+    microcopy: "Ti chiamiamo solo per inviarti la valutazione, mai per spam."
+  },
+  { 
+    text: "Email*", 
+    type: "input", 
+    fields: [
+      { name: "email", type: "email", placeholder: "Es. mario.rossi@email.com" }
+    ],
+    microcopy: "Riceverai qui la valutazione gratuita."
+  },
+  { 
+    text: "Tipologia di immobile*", 
+    type: "select", 
+    options: ["Appartamento", "Casa indipendente", "Villa", "Terreno", "Altro"]
+  },
+  { 
+    text: "Indirizzo / Zona*", 
+    type: "input", 
+    fields: [
+      { name: "indirizzo", type: "text", placeholder: "Es. Via Garibaldi 10, Milano" }
+    ],
+    microcopy: "Non serve l’indirizzo preciso, basta la zona."
+  },
+  { 
+    text: "Confermare", 
+    type: "submit", 
+    trust: "🔒 I tuoi dati sono al sicuro. In meno di 24 ore riceverai la valutazione gratuita del tuo immobile."
+  }
 ];
 
 let currentQuestion = 0;
@@ -14,61 +50,121 @@ const optionsContainer = document.getElementById("options");
 
 function loadQuestion(index) {
   if (index < questions.length) {
-    questionText.textContent = questions[index].text;
+    const q = questions[index];
+    questionText.textContent = q.text;
     optionsContainer.innerHTML = "";
 
-    // Input-type question
-    if (questions[index].type === "input") {
-      const emailInput = document.createElement("input");
-      emailInput.type = "email";
-      emailInput.placeholder = "Enter your email";
-      emailInput.required = true;
-      emailInput.className = "w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-red-500 outline-none";
+    if (q.type === "input") {
+      let inputs = [];
+      q.fields.forEach(field => {
+        const input = document.createElement("input");
+        input.type = field.type;
+        input.name = field.name;
+        input.placeholder = field.placeholder;
+        input.required = true;
+        input.className =
+          "w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-red-500 outline-none mb-2";
+        optionsContainer.appendChild(input);
+        inputs.push(input);
+      });
 
-      const phoneInput = document.createElement("input");
-      phoneInput.type = "tel";
-      phoneInput.placeholder = "Enter your phone number";
-      phoneInput.required = true;
-      phoneInput.className = "w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-red-500 outline-none mt-4";
+      if (q.microcopy) {
+        const mc = document.createElement("p");
+        mc.className = "mt-1 text-sm text-gray-500";
+        mc.textContent = q.microcopy;
+        optionsContainer.appendChild(mc);
+      }
 
       const errorMsg = document.createElement("p");
       errorMsg.className = "mt-2 text-sm text-red-600 hidden";
-      errorMsg.textContent = "Please fill out both Email and Phone correctly.";
+      errorMsg.textContent = "Per favore compila questo campo.";
+      optionsContainer.appendChild(errorMsg);
 
-      const submitBtn = document.createElement("button");
-      submitBtn.textContent = "Submit";
-      submitBtn.className = "mt-6 w-full py-3 px-4 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-lg font-semibold hover:opacity-90 transition";
-
-      submitBtn.onclick = () => {
-        if (!emailInput.value.trim() || !phoneInput.value.trim()) {
+      const nextBtn = document.createElement("button");
+      nextBtn.textContent = "Avanti";
+      nextBtn.className =
+        "mt-6 w-full py-3 px-4 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-lg font-semibold hover:opacity-90 transition";
+      nextBtn.onclick = (e) => {
+        e.preventDefault();
+        let valid = true;
+        inputs.forEach(inp => {
+          if (!inp.value.trim()) valid = false;
+        });
+        if (!valid) {
           errorMsg.classList.remove("hidden");
           return;
         }
         errorMsg.classList.add("hidden");
-        answers.push({ question: "Email", answer: emailInput.value });
-        answers.push({ question: "Phone", answer: phoneInput.value });
+        q.fields.forEach(field => {
+          const val = document.querySelector(`[name="${field.name}"]`).value;
+          answers.push({ question: q.text, answer: val });
+        });
+        currentQuestion++;
+        loadQuestion(currentQuestion);
+      };
+      optionsContainer.appendChild(nextBtn);
+    }
+
+    else if (q.type === "select") {
+      const select = document.createElement("select");
+      select.className =
+        "w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-red-500 outline-none";
+      select.required = true;
+
+      const def = document.createElement("option");
+      def.value = "";
+      def.textContent = "Seleziona";
+      select.appendChild(def);
+
+      q.options.forEach(opt => {
+        const option = document.createElement("option");
+        option.value = opt;
+        option.textContent = opt;
+        select.appendChild(option);
+      });
+
+      optionsContainer.appendChild(select);
+
+      const errorMsg = document.createElement("p");
+      errorMsg.className = "mt-2 text-sm text-red-600 hidden";
+      errorMsg.textContent = "Seleziona un'opzione.";
+      optionsContainer.appendChild(errorMsg);
+
+      const nextBtn = document.createElement("button");
+      nextBtn.textContent = "Avanti";
+      nextBtn.className =
+        "mt-6 w-full py-3 px-4 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-lg font-semibold hover:opacity-90 transition";
+      nextBtn.onclick = (e) => {
+        e.preventDefault();
+        if (!select.value) {
+          errorMsg.classList.remove("hidden");
+          return;
+        }
+        errorMsg.classList.add("hidden");
+        answers.push({ question: q.text, answer: select.value });
+        currentQuestion++;
+        loadQuestion(currentQuestion);
+      };
+      optionsContainer.appendChild(nextBtn);
+    }
+
+    else if (q.type === "submit") {
+      if (q.trust) {
+        const trustP = document.createElement("p");
+        trustP.className = "text-sm text-gray-600 mb-4";
+        trustP.textContent = q.trust;
+        optionsContainer.appendChild(trustP);
+      }
+
+      const submitBtn = document.createElement("button");
+      submitBtn.textContent = "Ottieni la tua valutazione gratuita";
+      submitBtn.className =
+        "mt-4 w-full py-3 px-4 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-lg font-semibold hover:opacity-90 transition";
+      submitBtn.onclick = (e) => {
+        e.preventDefault();
         showThankYou();
       };
-
-      optionsContainer.appendChild(emailInput);
-      optionsContainer.appendChild(phoneInput);
-      optionsContainer.appendChild(errorMsg);
       optionsContainer.appendChild(submitBtn);
-
-    } else {
-      // Option-type question
-      questions[index].options.forEach(option => {
-        const btn = document.createElement("button");
-        btn.textContent = option;
-        btn.className = "w-full py-3 px-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-medium transition-all duration-500 transform hover:scale-105";
-        btn.setAttribute("data-aos", "fade-up");
-        btn.onclick = () => {
-          answers.push({ question: questions[index].text, answer: option });
-          currentQuestion++;
-          loadQuestion(currentQuestion);
-        };
-        optionsContainer.appendChild(btn);
-      });
     }
 
     AOS.refresh();
@@ -79,7 +175,7 @@ function loadQuestion(index) {
 
 function showThankYou() {
   document.getElementById("questionTitle").innerHTML = "🔥 Deal Locked!";
-  questionText.textContent = "Thanks for trusting Studio Alfa. Your property details are with us — our team will contact you as soon as possible!";
+  questionText.textContent = "Grazie! I tuoi dati sono stati inviati. Ti contatteremo entro 24 ore.";
   optionsContainer.innerHTML = "";
 
   console.log("User Answers:", answers);
