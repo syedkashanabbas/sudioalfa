@@ -1,7 +1,7 @@
 // /js/quiz.js
 (() => {
   // TODO: apni key daalo
-  const WEB3FORMS_ACCESS_KEY = "ff9d7781-0cf0-47b9-b2ca-84d4f92a577f";
+  const WEB3FORMS_ACCESS_KEY = "7c83cf22-1fb8-4d41-9d6e-dbfbbf4998af";
   const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
   // Aapke existing questions/quiz state
