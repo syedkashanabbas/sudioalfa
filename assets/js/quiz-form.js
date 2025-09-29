@@ -5,14 +5,36 @@
   const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
   // Aapke existing questions/quiz state
-  const questions = [
-    { text: "Nome e Cognome*", type: "input", fields: [{ name: "nome", type: "text", placeholder: "Es. Mario Rossi" }] },
-    { text: "Telefono*", type: "input", fields: [{ name: "telefono", type: "tel", placeholder: "Es. +39 333 1234567" }], microcopy: "Ti chiamiamo solo per inviarti la valutazione, mai per spam." },
-    { text: "Email*", type: "input", fields: [{ name: "email", type: "email", placeholder: "Es. mario.rossi@email.com" }], microcopy: "Riceverai qui la valutazione gratuita." },
-    { text: "Tipologia di immobile*", type: "select", options: ["Appartamento", "Casa indipendente", "Villa", "Terreno", "Altro"] },
-    { text: "Indirizzo / Zona*", type: "input", fields: [{ name: "indirizzo", type: "text", placeholder: "Es. Via Garibaldi 10, Milano" }], microcopy: "Non serve l’indirizzo preciso, basta la zona." },
-    { text: "Confermare", type: "submit", trust: "🔒 I tuoi dati sono al sicuro. In meno di 24 ore riceverai la valutazione gratuita del tuo immobile." }
-  ];
+const questions = [
+  { text: "Nome e Cognome*", type: "input", fields: [{ name: "nome", type: "text", placeholder: "Es. Mario Rossi" }] },
+  { text: "Telefono*", type: "input", fields: [{ name: "telefono", type: "tel", placeholder: "Es. +39 333 1234567" }], microcopy: "Ti chiamiamo solo per inviarti la valutazione, mai per spam." },
+  { text: "Email*", type: "input", fields: [{ name: "email", type: "email", placeholder: "Es. mario.rossi@email.com" }], microcopy: "Riceverai qui la valutazione gratuita." },
+  { text: "Tipologia di immobile*", type: "select", options: ["Appartamento", "Casa indipendente", "Villa", "Terreno", "Altro"] },
+  { text: "Indirizzo / Zona*", type: "input", fields: [{ name: "indirizzo", type: "text", placeholder: "Es. Via Garibaldi 10, Milano" }], microcopy: "Non serve l’indirizzo preciso, basta la zona." },
+
+  // NEW QUESTIONS ADDED FROM CLIENT
+  { text: "In che zona si trova l’immobile?", type: "select", options: ["Centro", "Semicentro", "Periferia", "Collina", "Frazione", "Altro"] },
+
+  { text: "Sai indicare la metratura?", type: "select", options: ["Meno di 60 mq", "60–90 mq", "90–120 mq", "Oltre 120 mq", "Non lo so"] },
+
+  { text: "L’immobile ha spazi esterni?", type: "select", options: ["Balcone", "Terrazza", "Giardino", "Nessuno"] },
+
+  { text: "Com’è lo stato dell’immobile?", type: "select", options: ["Nuovo o ristrutturato di recente", "Da rinfrescare (piccoli lavori)", "Da ristrutturare completamente"] },
+
+  { text: "A che piano si trova?", type: "select", options: ["Piano terra o rialzato", "Primo o secondo piano", "Terzo o quarto piano", "Quinto piano o più"] },
+
+  { text: "È presente l’ascensore?", type: "select", options: ["Sì", "No"] },
+
+  { text: "C’è un garage o un posto auto?", type: "select", options: ["Garage", "Posto auto", "Nessuno"] },
+
+  { text: "Qual è l’esposizione principale?", type: "select", options: ["Su strada", "Interna (cortile)", "Mista"] },
+
+  { text: "Note aggiuntive", type: "input", fields: [{ name: "note", type: "text", placeholder: "Scrivi qui altre informazioni o dettagli" }] },
+
+  // SUBMIT STEP
+  { text: "Confermare", type: "submit", trust: "🔒 I tuoi dati sono al sicuro. In meno di 24 ore riceverai la valutazione gratuita del tuo immobile." }
+];
+
 
   let currentQuestion = 0;
   let answers = [];
