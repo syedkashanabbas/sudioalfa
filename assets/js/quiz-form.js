@@ -15,7 +15,29 @@ const questions = [
   // NEW QUESTIONS ADDED FROM CLIENT
   { text: "In che zona si trova l’immobile?", type: "select", options: ["Centro", "Semicentro", "Periferia", "Collina", "Frazione", "Altro"] },
 
-  { text: "Sai indicare la metratura?", type: "select", options: ["Meno di 60 mq", "60–90 mq", "90–120 mq", "Oltre 120 mq", "Non lo so"] },
+  // { text: "Sai indicare la metratura?", type: "select", options: ["Meno di 60 mq", "60–90 mq", "90–120 mq", "Oltre 120 mq", "Non lo so"] },
+      { 
+        text: "Sai indicare la metratura?", 
+        type: "select", 
+        options: [
+          "Meno di 30 mq",
+          "30 mq",
+          "40 mq",
+          "50 mq",
+          "60 mq",
+          "70 mq",
+          "80 mq",
+          "90 mq",
+          "100 mq",
+          "110 mq",
+          "120 mq",
+          "130 mq",
+          "140 mq",
+          "150 mq",
+          "Oltre 150 mq",
+          "Non lo so"
+        ] 
+      },
 
   { text: "L’immobile ha spazi esterni?", type: "select", options: ["Balcone", "Terrazza", "Giardino", "Nessuno"] },
 
